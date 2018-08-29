@@ -15,7 +15,9 @@ class BookViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: CellId)
+        navigationItem.title = "Kindle"
+        
+        tableView.register(BookCell.self, forCellReuseIdentifier: CellId)
         tableView.tableFooterView = UIView()
     }
 }
@@ -27,16 +29,27 @@ extension BookViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: CellId, for: indexPath)
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: CellId)
-        
-        return cell
+        if let cell = tableView.dequeueReusableCell(withIdentifier: CellId, for: indexPath) as? BookCell {
+            return cell
+        }
+        return UITableViewCell()
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 86
     }
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 
