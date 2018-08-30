@@ -18,7 +18,7 @@ class BookPagerController: UICollectionViewController {
         super.viewDidLoad()
         
         collectionView?.backgroundColor = .white
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        self.collectionView!.register(PageCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         
         navigationItem.title = "title of book"
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Close", style: .plain, target: self, action: #selector(handleBackButtonPressed))
@@ -42,15 +42,10 @@ extension BookPagerController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
-        
-        if indexPath.item % 2 == 0 {
-            cell.backgroundColor = .red
-        } else {
-            cell.backgroundColor = .blue
+        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? PageCell {
+            return cell
         }
-        
-        return cell
+        return UICollectionViewCell()
     }
 }
 

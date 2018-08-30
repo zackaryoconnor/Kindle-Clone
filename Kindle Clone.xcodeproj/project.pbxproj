@@ -15,6 +15,7 @@
 		F38FC0B12137647200DC9396 /* BookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38FC0B02137647200DC9396 /* BookCell.swift */; };
 		F38FC0B3213890A000DC9396 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38FC0B2213890A000DC9396 /* Book.swift */; };
 		F38FC0B5213892D200DC9396 /* BookPagerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38FC0B4213892D200DC9396 /* BookPagerController.swift */; };
+		F38FC0B721389A8800DC9396 /* PageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38FC0B621389A8800DC9396 /* PageCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		F38FC0B02137647200DC9396 /* BookCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCell.swift; sourceTree = "<group>"; };
 		F38FC0B2213890A000DC9396 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		F38FC0B4213892D200DC9396 /* BookPagerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookPagerController.swift; sourceTree = "<group>"; };
+		F38FC0B621389A8800DC9396 /* PageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				F38FC0A0213758ED00DC9396 /* BookViewController.swift */,
 				F38FC0B4213892D200DC9396 /* BookPagerController.swift */,
 				F38FC0B02137647200DC9396 /* BookCell.swift */,
+				F38FC0B621389A8800DC9396 /* PageCell.swift */,
 				F38FC0A2213758ED00DC9396 /* Main.storyboard */,
 				F38FC0A5213758F100DC9396 /* Assets.xcassets */,
 				F38FC0A7213758F100DC9396 /* LaunchScreen.storyboard */,
@@ -146,6 +149,7 @@
 			files = (
 				F38FC0B12137647200DC9396 /* BookCell.swift in Sources */,
 				F38FC0B5213892D200DC9396 /* BookPagerController.swift in Sources */,
+				F38FC0B721389A8800DC9396 /* PageCell.swift in Sources */,
 				F38FC0A1213758ED00DC9396 /* BookViewController.swift in Sources */,
 				F38FC09F213758ED00DC9396 /* AppDelegate.swift in Sources */,
 				F38FC0B3213890A000DC9396 /* Book.swift in Sources */,
