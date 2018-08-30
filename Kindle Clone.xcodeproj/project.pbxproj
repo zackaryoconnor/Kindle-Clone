@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		F38FC09F213758ED00DC9396 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38FC09E213758ED00DC9396 /* AppDelegate.swift */; };
 		F38FC0A1213758ED00DC9396 /* BookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38FC0A0213758ED00DC9396 /* BookViewController.swift */; };
-		F38FC0A4213758ED00DC9396 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F38FC0A2213758ED00DC9396 /* Main.storyboard */; };
 		F38FC0A6213758F100DC9396 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F38FC0A5213758F100DC9396 /* Assets.xcassets */; };
 		F38FC0A9213758F100DC9396 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F38FC0A7213758F100DC9396 /* LaunchScreen.storyboard */; };
 		F38FC0B12137647200DC9396 /* BookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38FC0B02137647200DC9396 /* BookCell.swift */; };
@@ -22,7 +21,6 @@
 		F38FC09B213758ED00DC9396 /* Kindle Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kindle Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F38FC09E213758ED00DC9396 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F38FC0A0213758ED00DC9396 /* BookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewController.swift; sourceTree = "<group>"; };
-		F38FC0A3213758ED00DC9396 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F38FC0A5213758F100DC9396 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F38FC0A8213758F100DC9396 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F38FC0AA213758F100DC9396 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -62,18 +60,49 @@
 		F38FC09D213758ED00DC9396 /* Kindle Clone */ = {
 			isa = PBXGroup;
 			children = (
-				F38FC09E213758ED00DC9396 /* AppDelegate.swift */,
-				F38FC0B2213890A000DC9396 /* Book.swift */,
-				F38FC0A0213758ED00DC9396 /* BookViewController.swift */,
-				F38FC0B4213892D200DC9396 /* BookPagerController.swift */,
-				F38FC0B02137647200DC9396 /* BookCell.swift */,
-				F38FC0B621389A8800DC9396 /* PageCell.swift */,
-				F38FC0A2213758ED00DC9396 /* Main.storyboard */,
+				F38FC0BB2138B9E600DC9396 /* Supporting Files */,
+				F38FC0BA2138B9DC00DC9396 /* Model */,
+				F38FC0B92138B9D200DC9396 /* View */,
+				F38FC0B82138B9C000DC9396 /* Controller */,
 				F38FC0A5213758F100DC9396 /* Assets.xcassets */,
-				F38FC0A7213758F100DC9396 /* LaunchScreen.storyboard */,
 				F38FC0AA213758F100DC9396 /* Info.plist */,
 			);
 			path = "Kindle Clone";
+			sourceTree = "<group>";
+		};
+		F38FC0B82138B9C000DC9396 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F38FC0A0213758ED00DC9396 /* BookViewController.swift */,
+				F38FC0B4213892D200DC9396 /* BookPagerController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F38FC0B92138B9D200DC9396 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F38FC0B621389A8800DC9396 /* PageCell.swift */,
+				F38FC0B02137647200DC9396 /* BookCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F38FC0BA2138B9DC00DC9396 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F38FC0B2213890A000DC9396 /* Book.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F38FC0BB2138B9E600DC9396 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F38FC0A7213758F100DC9396 /* LaunchScreen.storyboard */,
+				F38FC09E213758ED00DC9396 /* AppDelegate.swift */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,7 +165,6 @@
 			files = (
 				F38FC0A9213758F100DC9396 /* LaunchScreen.storyboard in Resources */,
 				F38FC0A6213758F100DC9396 /* Assets.xcassets in Resources */,
-				F38FC0A4213758ED00DC9396 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,14 +187,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		F38FC0A2213758ED00DC9396 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F38FC0A3213758ED00DC9396 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		F38FC0A7213758F100DC9396 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

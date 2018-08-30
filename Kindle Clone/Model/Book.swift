@@ -31,8 +31,6 @@ struct Book {
         }
         pages = bookPages
     }
-    
-    
 }
 
 class Page {

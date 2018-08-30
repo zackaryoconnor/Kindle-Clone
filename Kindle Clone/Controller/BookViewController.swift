@@ -67,15 +67,12 @@ class BookViewController: UITableViewController {
                         let book = Book(dictionary: bookDictionary)
                         self.books?.append(book)
                     }
-                    
                     DispatchQueue.main.async {
                         self.tableView.reloadData()
                     }
-                    
                 } catch let jsonError {
                     print("Failed to parse json: ", jsonError)
                 }
-                
             } .resume()
         }
     }
@@ -158,23 +155,3 @@ extension BookViewController {
         return 50
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
