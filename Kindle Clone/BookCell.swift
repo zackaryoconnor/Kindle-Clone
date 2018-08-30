@@ -10,7 +10,34 @@ import UIKit
 
 class BookCell: UITableViewCell {
     
-    let bookCoverImage: UIImageView = {
+    var book: Book? {
+        didSet {
+            bookTitleLabel.text = book?.titleOfBook
+            bookAuthorLabel.text = book?.authorOfBook
+            
+            guard let coverImageUrl = book?.coverImageUrl else { return }
+            guard let url = URL(string: coverImageUrl) else { return }
+            
+            bookCoverImage.image = nil
+            
+            let session = URLSession.shared
+            session.dataTask(with: url) { (data, response, error) in
+                if let err = error {
+                    print("Failed to fetch our book cover image: ", err)
+                }
+                
+                guard let imageData = data else { return }
+                guard let image = UIImage(data: imageData) else { return }
+                
+                DispatchQueue.main.async {
+                    self.bookCoverImage.image = image
+                }
+                
+            } .resume()
+        }
+    }
+    
+    private let bookCoverImage: UIImageView = {
         let imageView = UIImageView()
         
         imageView.image = #imageLiteral(resourceName: "steve_jobs")
@@ -22,7 +49,7 @@ class BookCell: UITableViewCell {
         return imageView
     }()
     
-    let bookTitleLabel: UILabel = {
+    private let bookTitleLabel: UILabel = {
         let label = UILabel()
         label.text = "Title of the book"
         label.font = .systemFont(ofSize: 18, weight: .medium)
@@ -30,7 +57,7 @@ class BookCell: UITableViewCell {
         return label
     }()
     
-    let bookAuthorLabel: UILabel = {
+    private let bookAuthorLabel: UILabel = {
         let label = UILabel()
         label.text = "Author of the book"
         label.textColor = .lightGray

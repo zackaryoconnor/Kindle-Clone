@@ -38,11 +38,15 @@ class BookPagerController: UICollectionViewController {
 
 extension BookPagerController {
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return book?.pages.count ?? 0
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? PageCell {
+            
+            let page = book?.pages[indexPath.row]
+            cell.textLabel.text = page?.text
+            
             return cell
         }
         return UICollectionViewCell()
