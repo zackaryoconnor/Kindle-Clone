@@ -12,6 +12,9 @@ class BookCell: UITableViewCell {
     
     let bookCoverImage: UIImageView = {
         let imageView = UIImageView()
+        
+        imageView.image = #imageLiteral(resourceName: "steve_jobs")
+        
         imageView.backgroundColor = .lightGray
         imageView.contentMode = .scaleAspectFill
         imageView.layer.cornerRadius = 4

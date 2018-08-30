@@ -13,6 +13,8 @@
 		F38FC0A6213758F100DC9396 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F38FC0A5213758F100DC9396 /* Assets.xcassets */; };
 		F38FC0A9213758F100DC9396 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F38FC0A7213758F100DC9396 /* LaunchScreen.storyboard */; };
 		F38FC0B12137647200DC9396 /* BookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38FC0B02137647200DC9396 /* BookCell.swift */; };
+		F38FC0B3213890A000DC9396 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38FC0B2213890A000DC9396 /* Book.swift */; };
+		F38FC0B5213892D200DC9396 /* BookPagerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38FC0B4213892D200DC9396 /* BookPagerController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		F38FC0A8213758F100DC9396 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F38FC0AA213758F100DC9396 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F38FC0B02137647200DC9396 /* BookCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCell.swift; sourceTree = "<group>"; };
+		F38FC0B2213890A000DC9396 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		F38FC0B4213892D200DC9396 /* BookPagerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookPagerController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +61,9 @@
 			isa = PBXGroup;
 			children = (
 				F38FC09E213758ED00DC9396 /* AppDelegate.swift */,
+				F38FC0B2213890A000DC9396 /* Book.swift */,
 				F38FC0A0213758ED00DC9396 /* BookViewController.swift */,
+				F38FC0B4213892D200DC9396 /* BookPagerController.swift */,
 				F38FC0B02137647200DC9396 /* BookCell.swift */,
 				F38FC0A2213758ED00DC9396 /* Main.storyboard */,
 				F38FC0A5213758F100DC9396 /* Assets.xcassets */,
@@ -139,8 +145,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F38FC0B12137647200DC9396 /* BookCell.swift in Sources */,
+				F38FC0B5213892D200DC9396 /* BookPagerController.swift in Sources */,
 				F38FC0A1213758ED00DC9396 /* BookViewController.swift in Sources */,
 				F38FC09F213758ED00DC9396 /* AppDelegate.swift in Sources */,
+				F38FC0B3213890A000DC9396 /* Book.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

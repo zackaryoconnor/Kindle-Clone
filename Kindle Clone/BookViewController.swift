@@ -11,6 +11,8 @@ import UIKit
 private let CellId = "CellId"
 
 class BookViewController: UITableViewController {
+    
+    var books: [Book]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +39,18 @@ extension BookViewController {
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 86
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedBook = self.books?[indexPath.row]
+        
+        let layout = UICollectionViewFlowLayout()
+        let bookPagerController = BookPagerController(collectionViewLayout: layout)
+        
+        bookPagerController.book = selectedBook
+        
+        let navController = UINavigationController(rootViewController: bookPagerController)
+        present(navController, animated: true, completion: nil)
     }
 }
 
