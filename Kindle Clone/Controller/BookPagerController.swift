@@ -20,7 +20,7 @@ class BookPagerController: UICollectionViewController {
         collectionView?.backgroundColor = .white
         self.collectionView!.register(PageCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         
-        navigationItem.title = "title of book"
+        navigationItem.title = book?.titleOfBook
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Close", style: .plain, target: self, action: #selector(handleBackButtonPressed))
         
         let layout = collectionView?.collectionViewLayout as? UICollectionViewFlowLayout

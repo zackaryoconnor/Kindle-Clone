@@ -53,6 +53,7 @@ class BookCell: UITableViewCell {
         let label = UILabel()
         label.text = "Title of the book"
         label.font = .systemFont(ofSize: 18, weight: .medium)
+        label.textColor = .white
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -72,6 +73,7 @@ class BookCell: UITableViewCell {
     }
     
     func setupCell() {
+        backgroundColor = .clear
         
         [bookCoverImage, bookTitleLabel, bookAuthorLabel].forEach { addSubview($0) }
         
@@ -82,13 +84,13 @@ class BookCell: UITableViewCell {
         
         bookTitleLabel.leftAnchor.constraint(equalTo: bookCoverImage.rightAnchor, constant: 8).isActive = true
         bookTitleLabel.rightAnchor.constraint(equalTo: rightAnchor, constant: -8).isActive = true
-        bookTitleLabel.centerYAnchor.constraint(equalTo: centerYAnchor, constant: -15).isActive = true
-        bookTitleLabel.heightAnchor.constraint(equalToConstant: 30).isActive = true
+        bookTitleLabel.centerYAnchor.constraint(equalTo: centerYAnchor, constant: -12.5).isActive = true
+        bookTitleLabel.heightAnchor.constraint(equalToConstant: 25).isActive = true
         
         bookAuthorLabel.topAnchor.constraint(equalTo: bookTitleLabel.bottomAnchor, constant: 0).isActive = true
         bookAuthorLabel.leftAnchor.constraint(equalTo: bookCoverImage.rightAnchor, constant: 8).isActive = true
         bookAuthorLabel.rightAnchor.constraint(equalTo: rightAnchor, constant: -8).isActive = true
-        bookAuthorLabel.heightAnchor.constraint(equalToConstant: 30).isActive = true
+        bookAuthorLabel.heightAnchor.constraint(equalToConstant: 20).isActive = true
     }
     
     required init?(coder aDecoder: NSCoder) {
